@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>برنامه ای برای امتحان زبان انگلیسی</title>
+</head>
+<body>
+  <p>این جمله را به فارسی ترجمه کن : What Is Your Name? <input id="answerInput" type="text"></p>
+  <button onclick="checkAnswer()">تایید</button>
+  <p id="resultMessage"></p>
+
+  <p>این جمله را به فارسی ترجمه کن : How Old Are You? <input id="answerInput1" type="text"></p>
+  <button onclick="checkAnswer()">تایید</button>
+  <p id="resultMessage1"></p>
+
+  <script>
+    function checkAnswer() {
+      var userAnswer = document.getElementById('answerInput').value;
+      if (userAnswer === 'اسم تو چیست؟') {
+        document.getElementById('resultMessage').innerText = 'افرین! جواب صحیح است.';
+      } else {
+        document.getElementById('resultMessage').innerText = 'جواب اشتباه است. لطفاً دوباره امتحان کنید.';
+      }
+      var userAnswer = document.getElementById('answerInput1').value;
+      if (userAnswer === 'چند ساله هستی؟') {
+        document.getElementById('resultMessage1').innerText = 'افرین! جواب صحیح است.';
+      } else {
+        document.getElementById('resultMessage1').innerText = 'جواب اشتباه است. لطفاً دوباره امتحان کنید.';
+      }
+    }
+  </script>
+</body>
+</html>
