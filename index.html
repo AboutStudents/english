@@ -12,6 +12,10 @@
   <button onclick="checkAnswer()">تایید</button>
   <p id="resultMessage1"></p>
 
+  <p>این جمله را به فارسی ترجمه کن : What is Your Brother Name? <input id="answerInput2" type="text"></p>
+  <button onclick="checkAnswer()">تایید</button>
+  <p id="resultMessage2"></p>
+
   <script>
     function checkAnswer() {
       var userAnswer = document.getElementById('answerInput').value;
@@ -25,6 +29,12 @@
         document.getElementById('resultMessage1').innerText = 'افرین! جواب صحیح است.';
       } else {
         document.getElementById('resultMessage1').innerText = 'جواب اشتباه است. لطفاً دوباره امتحان کنید.';
+      }
+      var userAnswer = document.getElementById('answerInput2').value;
+      if (userAnswer === 'اسم برادرت چیست؟') {
+        document.getElementById('resultMessage2').innerText = 'افرین! جواب صحیح است.';
+      } else {
+        document.getElementById('resultMessage2').innerText = 'جواب اشتباه است. لطفاً دوباره امتحان کنید.';
       }
     }
   </script>
